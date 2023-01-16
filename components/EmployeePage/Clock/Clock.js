@@ -7,7 +7,7 @@ const Clock = ({}) => {
 
   const clockInHandler = () => {
     const start = new Date();
-    console.log(start);
+
     setStartTime(start);
   };
 
@@ -15,14 +15,11 @@ const Clock = ({}) => {
 
   const clockOutHandler = () => {
     const end = new Date();
-    console.log(end);
+
     setEndTime(end);
-  };
 
-  const finalTime = (time1, time2) => {
-    const totalTime = Math.abs(time1 - time2) / 1000;
-
-    return totalTime;
+    const finalTime = Math.abs(startTime - end) / 1000;
+    setTotalTime(finalTime);
   };
 
   return (
@@ -35,7 +32,7 @@ const Clock = ({}) => {
       </div>
       <div>
         {startTime.toLocaleString()} To {endTime.toLocaleString()}
-        {finalTime(startTime, endTime)} Seconds
+        {totalTime}
       </div>
     </>
   );
