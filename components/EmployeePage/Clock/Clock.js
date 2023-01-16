@@ -35,14 +35,13 @@ const Clock = ({}) => {
     setTotalTime(final);
   };
 
-  console.log(totalTime[0] * 30);
-
   return (
     <>
-      <div className=" flex flex-col ">
+      <div className=" w-full flex flex-col ">
         <button className="bg-red-50 text-black" onClick={clockInHandler}>
           Clock In
         </button>
+        {/* button should be disabled unless clock in button was clicked */}
         <button onClick={clockOutHandler}>Clock Out</button>
       </div>
       <div>
