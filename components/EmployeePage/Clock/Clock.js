@@ -3,11 +3,10 @@ import { useState } from "react";
 const Clock = ({}) => {
   const [startTime, setStartTime] = useState([]);
   const [endTime, setEndTime] = useState([]);
-  const [totalTime, setTotalTime] = useState(undefined);
-  const [totalPay, setTotalPay] = useState(undefined);
+  const [totalTime, setTotalTime] = useState(0);
 
   const clockInHandler = () => {
-    const start = new Date();
+    const start = new Date("2023-01-16T08:30:00");
     setStartTime(start);
   };
 
@@ -27,7 +26,7 @@ const Clock = ({}) => {
   };
 
   const clockOutHandler = () => {
-    const end = new Date();
+    const end = new Date("2023-01-16T09:30:00");
 
     setEndTime(end);
 
@@ -35,6 +34,8 @@ const Clock = ({}) => {
     const final = timeConvert(time);
     setTotalTime(final);
   };
+
+  console.log(totalTime[0] * 30);
 
   return (
     <>
