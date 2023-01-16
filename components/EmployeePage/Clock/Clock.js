@@ -1,4 +1,4 @@
-import { use, useState } from "react";
+import { useState } from "react";
 
 const Clock = ({}) => {
   const [startTime, setStartTime] = useState([]);
@@ -8,7 +8,6 @@ const Clock = ({}) => {
 
   const clockInHandler = () => {
     const start = new Date();
-
     setStartTime(start);
   };
 
