@@ -23,13 +23,14 @@ const Clock = ({ addStartTime, finishTime, clockOutTime }) => {
 
   const timeConvert = (time) => {
     const t = Number(time);
-    const hour = Math.floor(t / 3600);
-    const minute = Math.floor((t % 3600) / 60);
+    const hours = Math.floor(t / 3600);
+    const minutes = Math.floor((t % 3600) / 60);
     const seconds = Math.floor((t % 3600) % 60);
 
-    const hoursDisplay = hour > 0 ? hour + (hour === 1 ? "hour" : "hours") : "";
+    const hoursDisplay =
+      hours > 0 ? hours + (hours === 1 ? "hour" : "hours") : "";
     const minutesDisplay =
-      minute > 0 ? minute + (minute === 1 ? "minute" : "minutes") : "";
+      minutes > 0 ? minutes + (minutes === 1 ? "minute" : "minutes") : "";
     const secondsDisplay =
       seconds > 0 ? seconds + (seconds === 1 ? "second" : "seconds") : "";
 
