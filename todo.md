@@ -1,6 +1,7 @@
 ## Would be used by Manager/WFM to verify employee actually worked today
 
--- Connect Clock in and Out to DB
+<!-- -- Connect Clock in and Out to DB -->
+
 -- Main page should display Today and Tomorrows schedule
 -- Main page should also show time clocked in and any special "company" wide annoucements
 
