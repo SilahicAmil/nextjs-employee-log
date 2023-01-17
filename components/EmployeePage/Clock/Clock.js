@@ -58,7 +58,9 @@ const Clock = ({ addStartTime, finishTime, clockOutTime }) => {
             Clock In
           </button>
         ) : (
-          <button onClick={clockOutHandler}>Clock Out</button>
+          <button onClick={clockOutHandler} className="bg-red-50 text-black">
+            Clock Out
+          </button>
         )}
         {/* button should be disabled unless clock in button was clicked */}
       </div>
