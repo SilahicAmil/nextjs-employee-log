@@ -4,7 +4,6 @@ const handler = async (req, res) => {
   if (req.method === "POST") {
     try {
       const data = req.body;
-      console.log(data);
 
       const client = await MongoClient.connect(process.env.DB_URL);
 
@@ -14,7 +13,6 @@ const handler = async (req, res) => {
 
       const result = await timeCollection.insertOne(data);
 
-      console.log(result);
       res
         .status(201)
         .json({ message: "time posted to DB successffully", result });

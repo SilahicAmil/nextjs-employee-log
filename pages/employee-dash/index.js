@@ -16,7 +16,6 @@ const EmployeeDashPage = (props) => {
   };
 
   const finishTimeHandler = async (endTimeData) => {
-    console.log("end time data", endTimeData);
     const response = await fetch("/api/clockOut", {
       method: "POST",
       body: JSON.stringify(endTimeData),

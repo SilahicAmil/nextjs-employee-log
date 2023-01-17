@@ -38,7 +38,7 @@ const Clock = ({ addStartTime, finishTime }) => {
     return hoursDisplay + minutesDisplay + secondsDisplay;
   };
 
-  const clockOutHandler = ({ objId }) => {
+  const clockOutHandler = () => {
     const end = new Date();
 
     setEndTime(end);
