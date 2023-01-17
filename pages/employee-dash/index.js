@@ -1,6 +1,6 @@
 import Clock from "@/components/EmployeePage/Clock/Clock";
 
-const EmployeeDashPage = () => {
+const EmployeeDashPage = (props) => {
   const addTimeHandler = async (startTimeData) => {
     const response = await fetch("/api/clockIn", {
       method: "POST",
@@ -15,8 +15,18 @@ const EmployeeDashPage = () => {
     console.log(data);
   };
 
-  const finishTimeHandler = (endTimeData) => {
-    console.log(endTimeData);
+  const finishTimeHandler = async (endTimeData) => {
+    console.log("end time data", endTimeData);
+    const response = await fetch("/api/clockOut", {
+      method: "POST",
+      body: JSON.stringify(endTimeData),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    const data = await response.json();
+    console.log(data);
   };
 
   return (

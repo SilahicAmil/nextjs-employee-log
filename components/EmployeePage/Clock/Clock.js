@@ -1,15 +1,16 @@
 import { useState } from "react";
 
-const Clock = ({ addStartTime, finishTime, clockOutTime }) => {
+const Clock = ({ addStartTime, finishTime }) => {
   const [startTime, setStartTime] = useState([]);
   const [endTime, setEndTime] = useState([]);
   const [totalTime, setTotalTime] = useState(0);
 
   const [clockedIn, setClockedIn] = useState(false);
 
+  const id = "Amil Silahic";
+
   const clockInHandler = () => {
     const start = new Date();
-    const id = Math.random(5, 50);
 
     const data = {
       id,
@@ -37,7 +38,7 @@ const Clock = ({ addStartTime, finishTime, clockOutTime }) => {
     return hoursDisplay + minutesDisplay + secondsDisplay;
   };
 
-  const clockOutHandler = () => {
+  const clockOutHandler = ({ objId }) => {
     const end = new Date();
 
     setEndTime(end);
@@ -45,7 +46,13 @@ const Clock = ({ addStartTime, finishTime, clockOutTime }) => {
     const time = Math.abs(startTime - end) / 1000;
     const final = timeConvert(time);
 
-    finishTime(final);
+    const finalData = {
+      id,
+      startTime,
+      timeOut: end,
+    };
+
+    finishTime(finalData);
     setTotalTime(final);
     setClockedIn(false);
   };
