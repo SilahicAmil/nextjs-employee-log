@@ -4,7 +4,6 @@ const HomePage = ({}) => {
   return (
     <>
       <div>
-        <h1 className="text-xl bg-red-500">Home Page</h1>
         <LoginForm />
       </div>
     </>
