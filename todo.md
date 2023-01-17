@@ -2,6 +2,7 @@
 
 <!-- -- Connect Clock in and Out to DB -->
 
+-- React/Redux Context on if clocked in or not
 -- Main page should display Today and Tomorrows schedule
 -- Main page should also show time clocked in and any special "company" wide annoucements
 
