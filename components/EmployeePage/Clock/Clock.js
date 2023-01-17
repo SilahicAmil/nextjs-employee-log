@@ -1,13 +1,24 @@
 import { useState } from "react";
 
-const Clock = ({}) => {
+const Clock = ({ addStartTime, finishTime, clockOutTime }) => {
   const [startTime, setStartTime] = useState([]);
   const [endTime, setEndTime] = useState([]);
   const [totalTime, setTotalTime] = useState(0);
 
+  const [clockedIn, setClockedIn] = useState(false);
+
   const clockInHandler = () => {
-    const start = new Date("2023-01-16T08:30:00");
+    const start = new Date();
+    const id = Math.random(5, 50);
+
+    const data = {
+      id,
+      timeStart: start,
+    };
+
     setStartTime(start);
+    addStartTime(data);
+    setClockedIn(true);
   };
 
   const timeConvert = (time) => {
@@ -26,23 +37,29 @@ const Clock = ({}) => {
   };
 
   const clockOutHandler = () => {
-    const end = new Date("2023-01-16T09:30:00");
+    const end = new Date();
 
     setEndTime(end);
 
     const time = Math.abs(startTime - end) / 1000;
     const final = timeConvert(time);
+
+    finishTime(final);
     setTotalTime(final);
+    setClockedIn(false);
   };
 
   return (
     <>
       <div className=" w-full flex flex-col ">
-        <button className="bg-red-50 text-black" onClick={clockInHandler}>
-          Clock In
-        </button>
+        {!clockedIn ? (
+          <button className="bg-red-50 text-black" onClick={clockInHandler}>
+            Clock In
+          </button>
+        ) : (
+          <button onClick={clockOutHandler}>Clock Out</button>
+        )}
         {/* button should be disabled unless clock in button was clicked */}
-        <button onClick={clockOutHandler}>Clock Out</button>
       </div>
       <div>
         {startTime.toLocaleString()} To {endTime.toLocaleString()}
