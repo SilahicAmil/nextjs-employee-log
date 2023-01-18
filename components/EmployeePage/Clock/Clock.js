@@ -1,3 +1,4 @@
+import TimeWorked from "./TimeWorked";
 import { useState } from "react";
 
 const Clock = ({ addStartTime, finishTime }) => {
@@ -59,7 +60,7 @@ const Clock = ({ addStartTime, finishTime }) => {
 
   return (
     <>
-      <div className=" w-full flex flex-col ">
+      <div className=" w-full flex flex-col h-full mt-6">
         {!clockedIn ? (
           <button className="bg-red-50 text-black" onClick={clockInHandler}>
             Clock In
@@ -71,10 +72,12 @@ const Clock = ({ addStartTime, finishTime }) => {
         )}
         {/* button should be disabled unless clock in button was clicked */}
       </div>
-      <div>
-        {startTime.toLocaleString()} To {endTime.toLocaleString()}
-        {totalTime}
-      </div>
+
+      <TimeWorked
+        startTime={startTime.toLocaleString()}
+        endTime={endTime.toLocaleString()}
+        totalTime={totalTime}
+      />
     </>
   );
 };

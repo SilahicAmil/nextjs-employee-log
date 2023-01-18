@@ -31,7 +31,6 @@ const EmployeeDashPage = (props) => {
   return (
     <>
       <div>
-        <h1>Employee Dash Page</h1>
         <Clock addStartTime={addTimeHandler} finishTime={finishTimeHandler} />
       </div>
     </>
