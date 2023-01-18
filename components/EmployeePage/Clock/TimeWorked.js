@@ -1,6 +1,6 @@
 const TimeWorked = ({ startTime, endTime, totalTime }) => {
   return (
-    <div className="flex flex-col mt-4 w-64 md:h-4/12 2 h-screen ml-4 rounded-xl  items-center bg-cyan-500 ">
+    <div className="flex flex-col mt-4 md:w-screen lg:w-[95vw] md:h-4/12  m-auto  rounded-xl items-center bg-cyan-500 ">
       <h1 className="mt-4 mb-4">Recent Days Worked</h1>
       <div className=" pb-4">
         <div>

@@ -5,7 +5,7 @@ const Layout = ({ children }) => {
     <>
       <div>
         <NavBar />
-        <main className="w-screen font-roboto ">{children}</main>
+        <main className="w-screen  ">{children}</main>
       </div>
     </>
   );

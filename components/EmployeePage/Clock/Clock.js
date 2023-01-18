@@ -60,9 +60,9 @@ const Clock = ({ addStartTime, finishTime }) => {
 
   return (
     <>
-      <div className=" w-full flex flex-col h-full mt-6">
+      <div className=" lg:w-[95vw] justify-center m-auto flex flex-col mt-6">
         {!clockedIn ? (
-          <button className="bg-red-50 text-black" onClick={clockInHandler}>
+          <button className="bg-red-50 h-8 text-black" onClick={clockInHandler}>
             Clock In
           </button>
         ) : (

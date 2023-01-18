@@ -3,8 +3,8 @@
 <!-- -- Connect Clock in and Out to DB -->
 
 -- React/Redux Context on if clocked in or not
--- Main page should display Today and Tomorrows schedule
--- Main page should also most recent hours worked (last 3 days ish) and any special "company" wide annoucements (either banner or own component)
+
+-- Main employee page should display any special "company" wide annoucements (either banner or own component)
 
 ## Used by employee to see when they worked - updated by WFM
 
