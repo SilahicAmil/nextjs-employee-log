@@ -3,7 +3,9 @@
 <!-- -- Connect Clock in and Out to DB -->
 
 -- React/Redux Context on if clocked in or not
--- Need to redesign the whole employee dashboard (look at notebook for sketch)
+
+<!-- -- Need to redesign the whole employee dashboard (look at notebook for sketch) -->
+
 -- Main employee page should display any special "company" wide annoucements (either banner or own component)
 
 ## Used by employee to see when they worked - updated by WFM
