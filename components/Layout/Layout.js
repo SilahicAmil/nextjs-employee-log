@@ -5,7 +5,7 @@ const Layout = ({ children }) => {
     <>
       <div>
         <NavBar />
-        <main className="w-screen mt-8 ">{children}</main>
+        <main className="w-screen mt-6">{children}</main>
       </div>
     </>
   );
