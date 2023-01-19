@@ -13,6 +13,7 @@ const OvertimeCard = ({ children }) => {
                 <li>
                   {/* eventually map over card INfo */}
                   <CardInfo />
+                  <CardInfo />
                 </li>
               </ul>
             </aside>
